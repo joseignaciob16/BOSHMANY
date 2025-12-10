@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>PESV - BOSHMANY INGENIERÍA DE LA SABANA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <div class="logo-circle">P</div>
+      <div>
+        <h1>Plan Estratégico de Seguridad Vial</h1>
+        <p>BOSHMANY INGENIERÍA DE LA SABANA · Panel de estudio de caso</p>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <span class="user-name">Equipo consultor</span>
+      <span class="user-role">Barfy &amp; Zulehika Compliance View</span>
+    </div>
+  </header>
+
+  <!-- PESTAÑAS -->
+<nav class="tabs">
+  <div class="container">
+    <button class="tab-button tab-button--active" data-section="section-estado">
+      Estado PESV
+    </button>
+    <button class="tab-button" data-section="elementos-pesv">
+      Elementos PESV
+    </button>
+    <button class="tab-button" data-section="evaluacion">
+      Evaluación
+    </button>
+    <button class="tab-button" data-section="registro-fotografico">
+      Registro fotográfico
+    </button>
+    <button class="tab-button" data-section="simulacros">
+      Manual de buenas prácticas
+    </button>
+  </div>
+</nav>
+
+
+
+  <!-- CONTENIDO -->
+  <main class="page container">
+
+  <!-- ESTADO PESV -->
+<section id="section-estado" class="section section--active">
+  <div class="container">
+    <h2 class="section__title">Estado del PESV</h2>
+    <p class="section__subtitle">
+      Radiografía actual de la gestión de seguridad vial en BOSHMANY INGENIERÍA DE LA SABANA.
+    </p>
+
+    <article class="snapshot-card">
+      <!-- Encabezado de la tarjeta -->
+      <header class="snapshot-card__header">
+        <div class="snapshot-header-left">
+          <div class="snapshot-header-icon">
+            📊
+          </div>
+          <div>
+            <h2>Radiografía actual del PESV</h2>
+            <p>Gestión de seguridad vial en BOSHMANY INGENIERÍA DE LA SABANA.</p>
+          </div>
+        </div>
+
+        <div class="snapshot-header-right">
+          <span class="snapshot-chip">Diagnóstico inicial 2025</span>
+          <div class="snapshot-meter">
+            <div class="snapshot-meter__circle">
+              <span class="snapshot-meter__value">60%</span>
+            </div>
+            <div class="snapshot-meter__label">
+              Avance general<br />
+              <span>En desarrollo</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Cuerpo: dos columnas -->
+      <div class="snapshot-layout">
+        <!-- Panel izquierdo: ficha de la operación -->
+        <section class="snapshot-panel">
+          <h3>Ficha de la operación</h3>
+          <p class="snapshot-panel__hint">
+            Datos básicos de la empresa y alcance del PESV.
+          </p>
+
+          <dl class="snapshot-dl">
+            <div>
+              <dt>Empresa</dt>
+              <dd>BOSHMANY INGENIERÍA DE LA SABANA</dd>
+            </div>
+            <div>
+              <dt>Responsables del tema</dt>
+              <dd>Barfy Erminsul de los Reyes y Zulehika Jasbleidy</dd>
+            </div>
+            <div>
+              <dt>Escala de operación</dt>
+              <dd>55 conductores · cobertura en 12 departamentos</dd>
+            </div>
+          </dl>
+
+          <div class="snapshot-kpi-grid">
+            <div class="snapshot-kpi">
+              <div class="snapshot-kpi__label">Conductores vinculados</div>
+              <div class="snapshot-kpi__value">55</div>
+              <div class="snapshot-kpi__icon">🚚</div>
+            </div>
+            <div class="snapshot-kpi">
+              <div class="snapshot-kpi__label">Departamentos con operación</div>
+              <div class="snapshot-kpi__value">12</div>
+              <div class="snapshot-kpi__icon">🗺️</div>
+            </div>
+            <div class="snapshot-kpi">
+              <div class="snapshot-kpi__label">Simulacros realizados</div>
+              <div class="snapshot-kpi__value">1</div>
+              <div class="snapshot-kpi__icon">🚨</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Panel derecho: mapa de situación -->
+        <section class="snapshot-panel snapshot-panel--map">
+          <div class="snapshot-map-header">
+            <div>
+              <h3>Mapa de situación</h3>
+              <p class="snapshot-panel__hint">
+                Cada punto se clasifica como fortaleza, aspecto a mejorar o punto crítico.
+              </p>
+            </div>
+
+            <div class="snapshot-legend">
+              <span class="legend-item legend-item--fortaleza">
+                <span class="dot"></span> Fortaleza
+              </span>
+              <span class="legend-item legend-item--mejora">
+                <span class="dot"></span> Aspecto a mejorar
+              </span>
+              <span class="legend-item legend-item--critico">
+                <span class="dot"></span> Punto crítico
+              </span>
+            </div>
+          </div>
+
+          <!-- Aquí se pintan los hallazgos -->
+          <div id="hallazgos-list" class="hallazgos-list">
+
+  <!-- 1. Fortaleza -->
+  <div class="hallazgo-item hallazgo-item--fortaleza">
+    <div class="hallazgo-dot"></div>
+    <div class="hallazgo-body">
+      <div class="hallazgo-tag">Fortaleza</div>
+      <div class="hallazgo-title">Política de seguridad vial definida</div>
+      <div class="hallazgo-desc">
+        La empresa cuenta con un documento formal que marca lineamientos y responsabilidades básicas.
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Fortaleza -->
+  <div class="hallazgo-item hallazgo-item--fortaleza">
+    <div class="hallazgo-dot"></div>
+    <div class="hallazgo-body">
+      <div class="hallazgo-tag">Fortaleza</div>
+      <div class="hallazgo-title">Simulacro ejecutado en junio de 2025</div>
+      <div class="hallazgo-desc">
+        Se realizó al menos un ejercicio práctico de respuesta ante incidente vial con los conductores.
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Aspecto a mejorar -->
+  <div class="hallazgo-item hallazgo-item--mejora">
+    <div class="hallazgo-dot"></div>
+    <div class="hallazgo-body">
+      <div class="hallazgo-tag">Aspecto a mejorar</div>
+      <div class="hallazgo-title">Objetivos y metas del PESV sin formalizar</div>
+      <div class="hallazgo-desc">
+        Todavía no se han acordado metas cuantificables ni indicadores claros para el plan.
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Aspecto a mejorar -->
+  <div class="hallazgo-item hallazgo-item--mejora">
+    <div class="hallazgo-dot"></div>
+    <div class="hallazgo-body">
+      <div class="hallazgo-tag">Aspecto a mejorar</div>
+      <div class="hallazgo-title">Programas del PASO 8 en etapa pendiente</div>
+      <div class="hallazgo-desc">
+        Los programas específicos del paso 8 están identificados pero no se han puesto en marcha.
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Punto crítico -->
+  <div class="hallazgo-item hallazgo-item--critico">
+    <div class="hallazgo-dot"></div>
+    <div class="hallazgo-body">
+      <div class="hallazgo-tag">Punto crítico</div>
+      <div class="hallazgo-title">Ausencia de mediciones y auditorías internas</div>
+      <div class="hallazgo-desc">
+        No existe un sistema regular para medir resultados ni revisar el cumplimiento del PESV.
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Punto crítico -->
+  <div class="hallazgo-item hallazgo-item--critico">
+    <div class="hallazgo-dot"></div>
+    <div class="hallazgo-body">
+      <div class="hallazgo-tag">Punto crítico</div>
+      <div class="hallazgo-title">Sin campañas de sensibilización 2024–2025</div>
+      <div class="hallazgo-desc">
+        En los últimos años no se han desarrollado campañas formales para los conductores.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+        </section>
+      </div>
+
+      <!-- Pie de la tarjeta -->
+      <footer class="snapshot-footer">
+        <div class="snapshot-footer__badge">
+          Reto declarado por la gerencia
+        </div>
+        <p>
+          Llegar al cierre de 2025 con el PESV implementado, medido y con evidencias suficientes
+          para planear el viaje al Mundial 2026 sin riesgos legales ni operativos.
+        </p>
+      </footer>
+    </article>
+  </div>
+</section>
+
+
+
+
+<!-- REGISTRO FOTOGRÁFICO -->
+<section id="registro-fotografico" class="section">
+  <article class="gallery-card">
+    <header class="gallery-card__header">
+      <h2>Registro fotográfico</h2>
+      <p>
+        Imágenes tomadas en Montería, Cereté y Cienega de Oro que ilustran condiciones reales de circulación,
+        estacionamiento y comportamiento de los actores viales.
+      </p>
+    </header>
+
+    <div class="gallery-grid">
+      <figure class="gallery-item">
+        <img src="img/monteria-motos-anden.jpg"
+             alt="Motos estacionadas junto a la calzada en Montería" />
+        <figcaption>
+          Motocicletas parqueadas sobre la vía en zona clínica de Montería.
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="img/cerete-semaforo-cruce.jpg"
+             alt="Cruce semaforizado con peatones y motos en Cereté" />
+        <figcaption>
+          Intersección semaforizada con cruce peatonal y motos en espera, Cereté.
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="img/cerete-anden-motos.jpg"
+             alt="Andén ocupado por motos en sector comercial de Cereté" />
+        <figcaption>
+          Andén usado como zona de parqueo de motos en área comercial de Cereté.
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="img/cerete-no-parquear.jpg"
+             alt="Señal de prohibido parquear en ambos costados" />
+        <figcaption>
+          Señal “Prohibido parquear en ambos costados” en zona comercial de Cereté.
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="img/monteria-interseccion.jpg"
+             alt="Intersección con semáforo y calzada húmeda en Montería" />
+        <figcaption>
+          Intersección con semáforo y calzada húmeda cerca de clínica en Montería.
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="img/monteria-taxi-parque.jpg"
+             alt="Taxi circulando frente a parque infantil en Montería" />
+        <figcaption>
+          Vehículo de servicio público circulando junto a zona de juegos infantiles.
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="img/monteria-4x4-parqueada.jpg"
+             alt="Camioneta antigua estacionada bajo árbol en área verde" />
+        <figcaption>
+          Vehículo particular estacionado en área verde lindante con la vía.
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="img/monteria-moto-doble.jpg"
+             alt="Motocicleta con dos ocupantes en zona residencial" />
+        <figcaption>
+          Motocicleta con dos ocupantes transitando en sector residencial.
+        </figcaption>
+      </figure>
+            <!-- Ciénaga de Oro -->
+      <figure class="gallery-item">
+        <img src="img/cienaga-cables-cruce.jpg"
+             alt="Cruce urbano en Ciénaga de Oro" />
+        <figcaption>
+          Cruce urbano en Ciénaga de Oro con numerosas redes aéreas y flujo de motos.
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="img/cienaga-loma-interseccion.jpg"
+             alt="Vía en pendiente con intersección y triciclo en Ciénaga de Oro" />
+        <figcaption>
+          Vía en pendiente con intersección y vehículo tipo mototaxi en barrio residencial de Ciénaga de Oro.
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="img/cienaga-centro-peatonal.jpg"
+             alt="Zona céntrica con circulación de motos y peatones en Ciénaga de Oro" />
+        <figcaption>
+          Zona céntrica de Ciénaga de Oro con circulación de motos y peatones en entorno comercial.
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="img/cienaga-cruce-comercial.jpg"
+             alt="Cruce principal con comercio en Ciénaga de Oro" />
+        <figcaption>
+          Cruce principal de Ciénaga de Oro con comercio, tráfico mixto y cables aéreos visibles.
+        </figcaption>
+      </figure>
+
+    </div>
+  </article>
+</section>
+
+<!-- ELEMENTOS PESV -->
+<section id="elementos-pesv" class="section">
+  <article class="elements-card">
+    <header class="elements-card__header">
+      <div class="elements-card__header-inner">
+        <div class="elements-card__text">
+          <div class="elements-icon-main">
+            <span>🚦</span>
+          </div>
+          <div>
+            <h2>Elementos clave del PESV empresarial</h2>
+            <p>
+              Guía rápida de lo que una empresa como BOSHMANY INGENIERÍA DE LA SABANA
+              debe contemplar para diseñar, implementar y mantener su Plan Estratégico
+              de Seguridad Vial.
+            </p>
+            <div class="elements-tags">
+              <span class="elements-tag">Ley 2251 de 2022</span>
+              <span class="elements-tag">Resolución 40595 de 2022</span>
+              <span class="elements-tag">Sistema seguro</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="elements-card__hero">
+          <div class="elements-hero-badge">
+            <div class="elements-hero-icon">🚚</div>
+            <p>Personas + Vehículos + Vías + Gestión = Seguridad vial</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Bloques de contenido -->
+    <div class="elements-grid">
+      <!-- Obligaciones -->
+      <section class="element-pill">
+        <div class="element-pill__head">
+          <div class="element-pill__icon">📋</div>
+          <div>
+            <h3>Obligaciones mínimas de la empresa</h3>
+            <p class="element-pill__subtitle">Qué debe cumplir BOSHMANY por norma.</p>
+          </div>
+        </div>
+        <ul>
+          <li>Elaborar y actualizar el PESV acorde con la Resolución 40595 de 2022.</li>
+          <li>Definir responsables, roles y recursos para la gestión de seguridad vial.</li>
+          <li>Identificar los riesgos viales en rutas, sedes y actividades críticas.</li>
+          <li>Diseñar programas para riesgos críticos (velocidad, fatiga, alcohol, distracción, etc.).</li>
+          <li>Medir, registrar y revisar periódicamente los resultados del plan.</li>
+        </ul>
+      </section>
+
+      <!-- Componentes -->
+      <section class="element-pill">
+        <div class="element-pill__head">
+          <div class="element-pill__icon element-pill__icon--blue">🧩</div>
+          <div>
+            <h3>Componentes que debe incluir el PESV</h3>
+            <p class="element-pill__subtitle">Piezas que no pueden faltar en el documento del plan.</p>
+          </div>
+        </div>
+        <ul>
+          <li>Política de seguridad vial firmada por la alta dirección.</li>
+          <li>Objetivos, metas e indicadores de seguimiento.</li>
+          <li>Planificación de desplazamientos laborales e itinere.</li>
+          <li>Programas de formación y sensibilización para conductores y demás actores viales.</li>
+          <li>Plan de preparación y respuesta ante emergencias viales.</li>
+          <li>Mecanismos de seguimiento, evaluación y mejora continua.</li>
+        </ul>
+      </section>
+
+      <!-- Recomendaciones -->
+      <section class="element-pill">
+        <div class="element-pill__head">
+          <div class="element-pill__icon element-pill__icon--green">💡</div>
+          <div>
+            <h3>Recomendaciones prácticas para BOSHMANY</h3>
+            <p class="element-pill__subtitle">Ideas para aterrizar el PESV al día a día.</p>
+          </div>
+        </div>
+        <ul>
+          <li>Crear un comité de seguridad vial que se reúna mínimo cada trimestre.</li>
+          <li>Integrar el PESV con el SG-SST y con los planes de operación logística.</li>
+          <li>Definir límites de velocidad por tipo de vía y controlar su cumplimiento.</li>
+          <li>Aplicar chequeos previos del vehículo y pausas activas en trayectos largos.</li>
+          <li>Utilizar incidentes y casi accidentes como insumo para ajustar los programas.</li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Material de apoyo -->
+    <section class="elements-support">
+      <h3>Material de apoyo y videos orientativos</h3>
+      <p>
+        Estos recursos sirven para reforzar el concepto de sistema seguro y la importancia
+        de contar con un PESV formal en la organización.
+      </p>
+
+      <div class="video-grid">
+        <article class="video-card">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/8G4-UyUCa5Y"
+              title="Video orientativo sobre el Plan Estratégico de Seguridad Vial"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <h4>¿Por qué implementar un PESV en la empresa?</h4>
+          <p>
+            Video explicativo sobre los objetivos del PESV, el enfoque de sistema seguro
+            y los beneficios para los trabajadores y la organización.
+          </p>
+        </article>
+
+        
+      </div>
+    </section>
+  </article>
+</section>
+
+
+ <!-- EVALUACIÓN -->
+<section id="evaluacion" class="section">
+  <article class="quiz-card">
+        <header class="quiz-card__header">
+      <div class="quiz-header-icon">
+        <span>✅</span>
+      </div>
+      <div>
+        <h2>Evaluación de conocimientos en seguridad vial</h2>
+        <p>
+          Cuestionario para colaboradores de BOSHMANY INGENIERÍA DE LA SABANA
+          sobre la Ley 2251 de 2022 y la Resolución 40595 de 2022.
+        </p>
+        <p class="quiz-note">
+          Al finalizar, el sistema indicará cuáles respuestas de selección múltiple
+          son correctas y cuáles no. Las preguntas abiertas se revisan de forma manual.
+        </p>
+      </div>
+    </header>
+
+
+    <form id="quiz-form" class="quiz-form">
+      <!-- Nombre -->
+      <div class="quiz-form__field">
+        <label for="nombre-completo">
+          Nombre completo <span class="quiz-required">*</span>
+        </label>
+        <input
+          type="text"
+          id="nombre-completo"
+          name="nombre"
+          class="quiz-input"
+          required
+        />
+      </div>
+
+      <ol class="quiz-questions">
+        <!-- PREGUNTA 1 -->
+        <li class="quiz-question" data-name="q1">
+          <p class="quiz-question__text">
+            La Ley 2251 de 2022 establece lineamientos para la política de
+            seguridad vial con enfoque de sistema seguro. Para el caso de
+            BOSHMANY INGENIERÍA DE LA SABANA, el límite máximo de velocidad en
+            las vías internas de la organización se establece en:
+          </p>
+          <div class="quiz-options">
+            <label>
+              <input type="radio" name="q1" value="50" required />
+              50 km/h
+            </label>
+            <label>
+              <input type="radio" name="q1" value="20" />
+              20 km/h
+            </label>
+            <label>
+              <input type="radio" name="q1" value="10" />
+              10 km/h
+            </label>
+            <label>
+              <input type="radio" name="q1" value="ninguno" />
+              No hay límite de velocidad
+            </label>
+          </div>
+          <p class="quiz-feedback"></p>
+        </li>
+
+        <!-- PREGUNTA 2 -->
+        <li class="quiz-question" data-name="q2">
+          <p class="quiz-question__text">
+            La sigla PESV hace referencia a:
+          </p>
+          <div class="quiz-options">
+            <label>
+              <input type="radio" name="q2" value="movilidad" required />
+              Plan de movilidad escolar
+            </label>
+            <label>
+              <input type="radio" name="q2" value="pesv" />
+              Plan estratégico de seguridad vial
+            </label>
+            <label>
+              <input type="radio" name="q2" value="emergencias" />
+              Plan de emergencias viales
+            </label>
+            <label>
+              <input type="radio" name="q2" value="ninguna" />
+              Ninguna de las anteriores
+            </label>
+          </div>
+          <p class="quiz-feedback"></p>
+        </li>
+
+        <!-- PREGUNTA 3 -->
+        <li class="quiz-question" data-name="q3">
+          <p class="quiz-question__text">
+            De acuerdo con la Resolución 40595 de 2022, BOSHMANY INGENIERÍA
+            DE LA SABANA cuenta con 55 conductores y realiza operaciones
+            logísticas a varios departamentos. El nivel de diseño del PESV y el
+            número de pasos que debe implementar es:
+          </p>
+          <div class="quiz-options">
+            <label>
+              <input type="radio" name="q3" value="estandar22" required />
+              Estándar y 22 pasos
+            </label>
+            <label>
+              <input type="radio" name="q3" value="avanzado24" />
+              Avanzado y 24 pasos
+            </label>
+            <label>
+              <input type="radio" name="q3" value="basico24" />
+              Básico y 24 pasos
+            </label>
+            <label>
+              <input type="radio" name="q3" value="basico18" />
+              Básico y 18 pasos
+            </label>
+            <label>
+              <input type="radio" name="q3" value="estandar18" />
+              Estándar y 18 pasos
+            </label>
+          </div>
+          <p class="quiz-feedback"></p>
+        </li>
+
+        <!-- PREGUNTA 4 -->
+        <li class="quiz-question" data-name="q4">
+          <p class="quiz-question__text">
+            Hace parte de la implementación del PESV en BOSHMANY
+            INGENIERÍA DE LA SABANA:
+          </p>
+          <div class="quiz-options">
+            <label>
+              <input type="radio" name="q4" value="vias" required />
+              Vías seguras administradas por la organización
+            </label>
+            <label>
+              <input type="radio" name="q4" value="desplazamientos" />
+              Planificación de desplazamientos laborales
+            </label>
+            <label>
+              <input type="radio" name="q4" value="plananual" />
+              Plan anual de trabajo
+            </label>
+            <label>
+              <input type="radio" name="q4" value="emergencias" />
+              Plan de preparación y respuesta ante emergencias viales
+            </label>
+            <label>
+              <input type="radio" name="q4" value="todas" />
+              Todas las anteriores
+            </label>
+          </div>
+          <p class="quiz-feedback"></p>
+        </li>
+
+        <!-- PREGUNTA 5 -->
+        <li class="quiz-question" data-name="q5">
+          <p class="quiz-question__text">
+            Los desplazamientos en itinere deben incluirse en la política de
+            seguridad vial; hacen referencia a “en el camino”, es decir, al
+            traslado de los trabajadores desde su lugar de residencia al lugar
+            habitual de trabajo y viceversa.
+          </p>
+          <div class="quiz-options">
+            <label>
+              <input type="radio" name="q5" value="verdadero" required />
+              Verdadero
+            </label>
+            <label>
+              <input type="radio" name="q5" value="falso" />
+              Falso
+            </label>
+          </div>
+          <p class="quiz-feedback"></p>
+        </li>
+
+        <!-- PREGUNTA 6 (ABIERTA) -->
+        <li class="quiz-question quiz-question--open" data-name="q6">
+          <p class="quiz-question__text">
+            Los desplazamientos laborales son los que se desarrollan para el
+            cumplimiento del contrato o funciones en los procesos
+            estratégicos, misionales y de apoyo de la empresa. Desde su cargo
+            o área, indique qué desplazamientos laborales realiza y/o programa
+            usted y su grupo de trabajo.
+          </p>
+          <textarea
+            name="q6"
+            rows="3"
+            class="quiz-textarea"
+            required
+          ></textarea>
+          <p class="quiz-feedback quiz-feedback--open">
+            Esta respuesta será analizada por el equipo de seguridad vial.
+          </p>
+        </li>
+
+        <!-- PREGUNTA 7 -->
+        <li class="quiz-question" data-name="q7">
+          <p class="quiz-question__text">
+            Son programas de gestión de riesgo crítico del PESV:
+          </p>
+          <div class="quiz-options">
+            <label>
+              <input type="radio" name="q7" value="velocidadfatiga" required />
+              Gestión de la velocidad segura y prevención de la fatiga
+            </label>
+            <label>
+              <input type="radio" name="q7" value="distraccionalcohol" />
+              Gestión de prevención de la distracción y 0 tolerancia al
+              alcohol y sustancias psicoactivas
+            </label>
+            <label>
+              <input type="radio" name="q7" value="actoresvulnerables" />
+              Protección de actores viales vulnerables
+            </label>
+            <label>
+              <input type="radio" name="q7" value="todos" />
+              Todos los anteriores
+            </label>
+          </div>
+          <p class="quiz-feedback"></p>
+        </li>
+
+        <!-- PREGUNTA 8 (ABIERTA) -->
+        <li class="quiz-question quiz-question--open" data-name="q8">
+          <p class="quiz-question__text">
+            ¿Qué estrategia sugiere para la implementación oportuna y eficaz
+            de los programas de gestión de riesgo crítico en BOSHMANY
+            INGENIERÍA DE LA SABANA?
+          </p>
+          <textarea
+            name="q8"
+            rows="3"
+            class="quiz-textarea"
+            required
+          ></textarea>
+          <p class="quiz-feedback quiz-feedback--open">
+            Esta respuesta será analizada por el equipo de seguridad vial.
+          </p>
+        </li>
+
+        <!-- PREGUNTA 9 -->
+        <li class="quiz-question" data-name="q9">
+          <p class="quiz-question__text">
+            En la implementación del PESV de BOSHMANY INGENIERÍA DE LA
+            SABANA, uno de los pasos que <strong>no aplica</strong> a la
+            empresa corresponde a:
+          </p>
+          <div class="quiz-options">
+            <label>
+              <input type="radio" name="q9" value="responsabilidad" required />
+              Responsabilidad y comportamiento seguro
+            </label>
+            <label>
+              <input type="radio" name="q9" value="auditoria" />
+              Auditoría
+            </label>
+            <label>
+              <input type="radio" name="q9" value="plananual" />
+              Plan anual de trabajo
+            </label>
+            <label>
+              <input type="radio" name="q9" value="desplazamientos" />
+              Planificación de desplazamientos laborales
+            </label>
+            <label>
+              <input type="radio" name="q9" value="ninguna" />
+              Ninguna de las anteriores
+            </label>
+          </div>
+          <p class="quiz-feedback"></p>
+        </li>
+
+        <!-- PREGUNTA 10 (ABIERTA) -->
+        <li class="quiz-question quiz-question--open" data-name="q10">
+          <p class="quiz-question__text">
+            Para la implementación exitosa de la Resolución 40595 de 2022
+            y de todo lo asociado a la seguridad vial en BOSHMANY INGENIERÍA DE
+            LA SABANA, considere que se deben realizar las siguientes acciones
+            (mencione al menos 2):
+          </p>
+          <textarea
+            name="q10"
+            rows="3"
+            class="quiz-textarea"
+            required
+          ></textarea>
+          <p class="quiz-feedback quiz-feedback--open">
+            Esta respuesta será analizada por el equipo de seguridad vial.
+          </p>
+        </li>
+      </ol>
+
+      <button type="submit" class="quiz-submit">
+        Enviar evaluación
+      </button>
+      <p id="quiz-summary" class="quiz-summary"></p>
+    </form>
+  </article>
+</section>
+
+
+    <!-- DOCUMENTOS -->
+    <section id="documentos" class="section">
+      <h2 class="section__title">Documentos del PESV</h2>
+      <p class="section__subtitle">
+        Política, plan, procedimientos, formatos e informes relacionados con la seguridad vial.
+      </p>
+      <div class="placeholder-card">
+        <p>📂 Espacio para relacionar documentos (nombre, tipo, versión, estado).</p>
+      </div>
+    </section>
+
+    <!-- SIMULACROS -->
+  <!-- MANUAL DE BUENAS PRÁCTICAS EN SEGURIDAD VIAL -->
+<section id="simulacros" class="section">
+  <article class="manual-card">
+    <div class="manual-card__text">
+      <h2 class="section__title">Manual de buenas prácticas en seguridad vial</h2>
+      <p class="section__subtitle">
+        Documento técnico <strong>"210202 MANUAL DE BUENAS PRÁCTICAS EN SEGURIDAD VIAL"</strong>,
+        con lineamientos prácticos para conductores, supervisores y la gerencia de
+        BOSHMANY INGENIERÍA DE LA SABANA.
+      </p>
+
+      <ul class="manual-card__list">
+        <li>Recomendaciones para una conducción segura en vías urbanas e intermunicipales.</li>
+        <li>Buenas prácticas frente a velocidad, distracción, alcohol, fatiga y mantenimiento.</li>
+        <li>Sugerencias para integrar el PESV con el SG-SST y la operación logística.</li>
+      </ul>
+    </div>
+
+    <div class="manual-card__actions">
+      <a
+        class="manual-card__button"
+        href="210202 MANUAL DE BUENAS PRÁCTICAS EN SEGURIDAD VIAL.pdf"
+        target="_blank"
+        rel="noopener"
+      >
+        Abrir manual en PDF
+      </a>
+      <p class="manual-card__note">
+        El documento se abrirá en una nueva pestaña del navegador.
+      </p>
+    </div>
+  </article>
+</section>
+
+
+  </main>
+
+   <!-- Lightbox para ver fotos en grande -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightbox__backdrop"></div>
+    <figure class="lightbox__content">
+      <button class="lightbox__close" aria-label="Cerrar imagen">&times;</button>
+      <img src="" alt="" class="lightbox__img" />
+      <figcaption class="lightbox__caption"></figcaption>
+    </figure>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
